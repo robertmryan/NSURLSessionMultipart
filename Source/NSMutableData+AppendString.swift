@@ -16,7 +16,7 @@ extension NSMutableData {
     ///
     /// - parameter string:       The string to be added to the `NSMutableData`.
 
-    func appendString(string: String) {
+    public func appendString(string: String) {
         let data = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
         appendData(data!)
     }

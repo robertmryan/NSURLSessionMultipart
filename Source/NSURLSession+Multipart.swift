@@ -24,7 +24,7 @@ extension NSURLSession {
     ///
     /// - returns:                      The `NSURLRequest` that was created. This throws error if there was problem opening file in the `fileURLs`.
     
-    func uploadMultipartTaskWithURL(URL: NSURL, parameters: [String: AnyObject]?, fileKeyName: String, fileURLs: [NSURL], localFileURL: NSURL? = nil) throws -> NSURLSessionUploadTask {
+    public func uploadMultipartTaskWithURL(URL: NSURL, parameters: [String: AnyObject]?, fileKeyName: String, fileURLs: [NSURL], localFileURL: NSURL? = nil) throws -> NSURLSessionUploadTask {
         let (request, data) = try createMultipartRequestWithURL(URL, parameters: parameters, fileKeyName: fileKeyName, fileURLs: fileURLs)
         if let localFileURL = localFileURL {
             try data.writeToURL(localFileURL, options: .DataWritingAtomic)
@@ -47,7 +47,7 @@ extension NSURLSession {
     ///
     /// - returns:                      The `NSURLRequest` that was created. This throws error if there was problem opening file in the `fileURLs`.
 
-    func uploadMultipartTaskWithURL(URL: NSURL, parameters: [String: AnyObject]?, fileKeyName: String, fileURLs: [NSURL], completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) throws -> NSURLSessionUploadTask {
+    public func uploadMultipartTaskWithURL(URL: NSURL, parameters: [String: AnyObject]?, fileKeyName: String, fileURLs: [NSURL], completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) throws -> NSURLSessionUploadTask {
         let (request, data) = try createMultipartRequestWithURL(URL, parameters: parameters, fileKeyName: fileKeyName, fileURLs: fileURLs)
         return uploadTaskWithRequest(request, fromData: data, completionHandler: completionHandler)
     }
@@ -64,7 +64,7 @@ extension NSURLSession {
     ///
     /// - returns:                      The `NSURLRequest` that was created. This throws error if there was problem opening file in the `fileURLs`.
     
-    func dataMultipartTaskWithURL(URL: NSURL, parameters: [String: AnyObject]?, fileKeyName: String, fileURLs: [NSURL]) throws -> NSURLSessionDataTask {
+    public func dataMultipartTaskWithURL(URL: NSURL, parameters: [String: AnyObject]?, fileKeyName: String, fileURLs: [NSURL]) throws -> NSURLSessionDataTask {
         let (request, data) = try createMultipartRequestWithURL(URL, parameters: parameters, fileKeyName: fileKeyName, fileURLs: fileURLs)
         request.HTTPBody = data
         return dataTaskWithRequest(request)
@@ -83,7 +83,7 @@ extension NSURLSession {
     ///
     /// - returns:                      The `NSURLRequest` that was created. This throws error if there was problem opening file in the `fileURLs`.
     
-    func dataMultipartTaskWithURL(URL: NSURL, parameters: [String: AnyObject]?, fileKeyName: String, fileURLs: [NSURL], completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) throws -> NSURLSessionDataTask {
+    public func dataMultipartTaskWithURL(URL: NSURL, parameters: [String: AnyObject]?, fileKeyName: String, fileURLs: [NSURL], completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) throws -> NSURLSessionDataTask {
         let (request, data) = try createMultipartRequestWithURL(URL, parameters: parameters, fileKeyName: fileKeyName, fileURLs: fileURLs)
         request.HTTPBody = data
         return dataTaskWithRequest(request, completionHandler: completionHandler)
@@ -100,7 +100,7 @@ extension NSURLSession {
     ///
     /// - returns:                The `NSURLRequest` that was created. This throws error if there was problem opening file in the `fileURLs`.
     
-    func createMultipartRequestWithURL(URL: NSURL, parameters: [String: AnyObject]?, fileKeyName: String, fileURLs: [NSURL]) throws -> (NSMutableURLRequest, NSData) {
+    public func createMultipartRequestWithURL(URL: NSURL, parameters: [String: AnyObject]?, fileKeyName: String, fileURLs: [NSURL]) throws -> (NSMutableURLRequest, NSData) {
         let boundary = NSURLSession.generateBoundaryString()
         
         let request = NSMutableURLRequest(URL: URL)

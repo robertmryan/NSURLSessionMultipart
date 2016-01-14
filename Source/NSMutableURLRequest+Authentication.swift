@@ -18,7 +18,7 @@ extension NSMutableURLRequest {
     /// - parameter password:        The password
     /// - parameter authentication:  The type of authentication to be applied
     
-    func updateBasicAuthForUser(username: String, password: String, authentication: String = kCFHTTPAuthenticationSchemeBasic as String) {
+    public func updateBasicAuthForUser(username: String, password: String, authentication: String = kCFHTTPAuthenticationSchemeBasic as String) {
         let message = CFHTTPMessageCreateRequest(kCFAllocatorDefault, HTTPMethod, URL!, kCFHTTPVersion1_1).takeRetainedValue()
         if !CFHTTPMessageAddAuthentication(message, nil, username, password, authentication, false) {
             print("authentication not added")
