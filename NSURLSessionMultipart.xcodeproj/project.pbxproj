@@ -8,12 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		831483AE1C46E223001280F7 /* NSURLSessionMultipart.h in Headers */ = {isa = PBXBuildFile; fileRef = 831483AD1C46E223001280F7 /* NSURLSessionMultipart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		831483BC1C46E26A001280F7 /* NSMutableData+AppendString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831483B91C46E26A001280F7 /* NSMutableData+AppendString.swift */; };
+		831483BD1C46E26A001280F7 /* NSMutableURLRequest+Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831483BA1C46E26A001280F7 /* NSMutableURLRequest+Authentication.swift */; };
+		831483BE1C46E26A001280F7 /* NSURLSession+Multipart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831483BB1C46E26A001280F7 /* NSURLSession+Multipart.swift */; };
+		831483C61C46E2DF001280F7 /* SharedSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831483C51C46E2DF001280F7 /* SharedSessionTests.swift */; };
+		831483C81C46E2DF001280F7 /* NSURLSessionMultipart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831483AA1C46E223001280F7 /* NSURLSessionMultipart.framework */; };
+		831483CF1C46E852001280F7 /* apple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 831483CE1C46E852001280F7 /* apple.jpg */; };
+		8314842C1C470187001280F7 /* StandaloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314842B1C470187001280F7 /* StandaloneTests.swift */; };
+		8314842E1C4703B8001280F7 /* DelegateSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314842D1C4703B8001280F7 /* DelegateSessionTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		831483C91C46E2DF001280F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 831483A11C46E223001280F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 831483A91C46E223001280F7;
+			remoteInfo = NSURLSessionMultipart;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		831483AA1C46E223001280F7 /* NSURLSessionMultipart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSURLSessionMultipart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831483AD1C46E223001280F7 /* NSURLSessionMultipart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSURLSessionMultipart.h; sourceTree = "<group>"; };
 		831483AF1C46E223001280F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		831483B61C46E261001280F7 /* upload.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = upload.php; sourceTree = "<group>"; };
+		831483B91C46E26A001280F7 /* NSMutableData+AppendString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableData+AppendString.swift"; sourceTree = "<group>"; };
+		831483BA1C46E26A001280F7 /* NSMutableURLRequest+Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableURLRequest+Authentication.swift"; sourceTree = "<group>"; };
+		831483BB1C46E26A001280F7 /* NSURLSession+Multipart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLSession+Multipart.swift"; sourceTree = "<group>"; };
+		831483C31C46E2DF001280F7 /* NSURLSessionMultipartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSURLSessionMultipartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		831483C51C46E2DF001280F7 /* SharedSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedSessionTests.swift; sourceTree = "<group>"; };
+		831483C71C46E2DF001280F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		831483CE1C46E852001280F7 /* apple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = apple.jpg; sourceTree = "<group>"; };
+		8314842B1C470187001280F7 /* StandaloneTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandaloneTests.swift; sourceTree = "<group>"; };
+		8314842D1C4703B8001280F7 /* DelegateSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateSessionTests.swift; sourceTree = "<group>"; };
+		83FDA11A1C470BCE00663343 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		83FDA11B1C470BCE00663343 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,13 +54,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		831483C01C46E2DF001280F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831483C81C46E2DF001280F7 /* NSURLSessionMultipart.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		831483A01C46E223001280F7 = {
 			isa = PBXGroup;
 			children = (
+				83FDA11B1C470BCE00663343 /* README.md */,
+				83FDA11A1C470BCE00663343 /* LICENSE */,
+				831483B81C46E26A001280F7 /* Source */,
+				831483B51C46E261001280F7 /* Sample PHP code */,
 				831483AC1C46E223001280F7 /* NSURLSessionMultipart */,
+				831483C41C46E2DF001280F7 /* NSURLSessionMultipartTests */,
 				831483AB1C46E223001280F7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				831483AA1C46E223001280F7 /* NSURLSessionMultipart.framework */,
+				831483C31C46E2DF001280F7 /* NSURLSessionMultipartTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,6 +94,36 @@
 				831483AF1C46E223001280F7 /* Info.plist */,
 			);
 			path = NSURLSessionMultipart;
+			sourceTree = "<group>";
+		};
+		831483B51C46E261001280F7 /* Sample PHP code */ = {
+			isa = PBXGroup;
+			children = (
+				831483B61C46E261001280F7 /* upload.php */,
+			);
+			path = "Sample PHP code";
+			sourceTree = "<group>";
+		};
+		831483B81C46E26A001280F7 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				831483BB1C46E26A001280F7 /* NSURLSession+Multipart.swift */,
+				831483B91C46E26A001280F7 /* NSMutableData+AppendString.swift */,
+				831483BA1C46E26A001280F7 /* NSMutableURLRequest+Authentication.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		831483C41C46E2DF001280F7 /* NSURLSessionMultipartTests */ = {
+			isa = PBXGroup;
+			children = (
+				831483C51C46E2DF001280F7 /* SharedSessionTests.swift */,
+				8314842D1C4703B8001280F7 /* DelegateSessionTests.swift */,
+				8314842B1C470187001280F7 /* StandaloneTests.swift */,
+				831483CE1C46E852001280F7 /* apple.jpg */,
+				831483C71C46E2DF001280F7 /* Info.plist */,
+			);
+			path = NSURLSessionMultipartTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,16 +158,38 @@
 			productReference = 831483AA1C46E223001280F7 /* NSURLSessionMultipart.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		831483C21C46E2DF001280F7 /* NSURLSessionMultipartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 831483CB1C46E2DF001280F7 /* Build configuration list for PBXNativeTarget "NSURLSessionMultipartTests" */;
+			buildPhases = (
+				831483BF1C46E2DF001280F7 /* Sources */,
+				831483C01C46E2DF001280F7 /* Frameworks */,
+				831483C11C46E2DF001280F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				831483CA1C46E2DF001280F7 /* PBXTargetDependency */,
+			);
+			name = NSURLSessionMultipartTests;
+			productName = NSURLSessionMultipartTests;
+			productReference = 831483C31C46E2DF001280F7 /* NSURLSessionMultipartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		831483A11C46E223001280F7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Robert Ryan";
 				TargetAttributes = {
 					831483A91C46E223001280F7 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					831483C21C46E2DF001280F7 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -111,6 +207,7 @@
 			projectRoot = "";
 			targets = (
 				831483A91C46E223001280F7 /* NSURLSessionMultipart */,
+				831483C21C46E2DF001280F7 /* NSURLSessionMultipartTests */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +220,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		831483C11C46E2DF001280F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831483CF1C46E852001280F7 /* apple.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -130,10 +235,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831483BC1C46E26A001280F7 /* NSMutableData+AppendString.swift in Sources */,
+				831483BE1C46E26A001280F7 /* NSURLSession+Multipart.swift in Sources */,
+				831483BD1C46E26A001280F7 /* NSMutableURLRequest+Authentication.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		831483BF1C46E2DF001280F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8314842E1C4703B8001280F7 /* DelegateSessionTests.swift in Sources */,
+				8314842C1C470187001280F7 /* StandaloneTests.swift in Sources */,
+				831483C61C46E2DF001280F7 /* SharedSessionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		831483CA1C46E2DF001280F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 831483A91C46E223001280F7 /* NSURLSessionMultipart */;
+			targetProxy = 831483C91C46E2DF001280F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		831483B01C46E223001280F7 /* Debug */ = {
@@ -257,6 +383,26 @@
 			};
 			name = Release;
 		};
+		831483CC1C46E2DF001280F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NSURLSessionMultipartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertmryan.NSURLSessionMultipartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		831483CD1C46E2DF001280F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NSURLSessionMultipartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertmryan.NSURLSessionMultipartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -276,6 +422,16 @@
 				831483B41C46E223001280F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		831483CB1C46E2DF001280F7 /* Build configuration list for PBXNativeTarget "NSURLSessionMultipartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				831483CC1C46E2DF001280F7 /* Debug */,
+				831483CD1C46E2DF001280F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
